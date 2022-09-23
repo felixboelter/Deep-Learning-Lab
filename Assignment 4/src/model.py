@@ -1,6 +1,5 @@
 import torch
 from torch import nn
-import torchtext
 import math
 
 # The positional encoding is a sinusoid that is added to the embedding vector. The sinusoid has a
@@ -32,7 +31,7 @@ class PositionalEncoding(nn.Module):
 class TransformerModel(nn.Module):
   def __init__(self, d_model: int = 512, nhead: int = 8, num_encoder_layers: int = 6, num_decoder_layers: int = 6,
                 dim_feedforward: int = 2048,src_tokens: int = None,tgt_tokens: int = None,
-                device : torch.cuda.device = None, target_field : torchtext.data.Field = None) -> None:
+                device : torch.cuda.device = None, target_field = None) -> None:
     """
     The TransformerModel class is a subclass of nn.Module. It takes in a number of arguments, and then
     initializes the superclass, and then initializes the transformer, positional encoder, source and
