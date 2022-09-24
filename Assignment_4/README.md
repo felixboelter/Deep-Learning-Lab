@@ -1,11 +1,22 @@
 # Assignment 4
 Implemented the Transformer sequence-to-sequence model to solve mathematical problems based on the [DeepMind Mathematics Dataset](https://github.com/deepmind/mathematics_dataset) 
 which includes three difficulties. A further review of the implementation, hyperparameter tuning, the training and validation losses and their respective accuracies can be seen in the [Report](https://github.com/felixboelter/Deep-Learning-Lab/blob/main/Assignment_4/Report/Assignment_4_Felix_Boelter.pdf).
-
-### Usage
+## Installation
+**Conda**:
+```
+$ git clone https://github.com/felixboelter/Deep-Learning-Lab
+$ conda config --append channels pytorch
+$ conda create --name <env_name> --file requirements.txt
+```
+**Pip**:
+```
+$ git clone https://github.com/felixboelter/Deep-Learning-Lab
+$ pip install torchtext==0.10.0 torch==1.9.0 tqdm jupyter numpy matplotlib
+```
+## Usage
 Open [model_trainer.ipynb](https://github.com/felixboelter/Deep-Learning-Lab/blob/main/Assignment_4/model_trainer.ipynb) and run the code blocks from top to bottom. This will train the model with the default hyperparameter settings. You can change the hyperparameters by looking under the header "Hyperparameters and Constants".
 
-### Results
+## Results
 **_numbers - place value_**
 ```
 Example Question: What is the tens digit of 93283843? | Expected Answer: 4 | Generated Answer: 4<eos>
