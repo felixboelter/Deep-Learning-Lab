@@ -1,6 +1,10 @@
 import os
 import requests
 def get_fables():
+    """
+    The function `get_fables()` downloads the text of Aesop's Fables from Project Gutenberg and saves
+    it to a file in the `data/books` directory
+    """
     book_path = os.path.join('data','books')
     resp = requests.get("https://www.gutenberg.org/files/49010/49010-0.txt")
     if not os.path.exists(book_path):
